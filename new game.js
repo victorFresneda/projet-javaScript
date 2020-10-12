@@ -13,7 +13,7 @@ switch (user, machine){
         console.log("User win!")
         break;
     case user === 3 && machine === 2:
-        console.log(" win!")
+        console.log(" gano!")
         break;
     case user === machine:
         console.log("Draw")
