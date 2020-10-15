@@ -1,5 +1,5 @@
 var user = Number(
-    prompt("Elije una opcion: 1-piedra 2-papel 3-tijera")
+    prompt("Opciones: 1-piedra 2-papel 3-tijera")
 );
 
 var machine = Math.floor(Math.random() * (4-1)) + 1;
