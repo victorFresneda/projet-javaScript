@@ -1,17 +1,27 @@
-function auto (MARCA, MODELO, ANNIO){
-  this.marca = MARCA;
-  this.modelo = MODELO;
-  this.annio = ANNIO;
-}
-var cantidadAutos = prompt("Ingrese cantidad de autos a listar");
-var autos = [];
-for(var i = 0 ; i < cantidadAutos ; i++){
-  var marca = prompt("Ingresa la marca del auto N°" + Number(i+1) + ":");
-  var modelo = prompt("Ingresa el modelo del auto N°" + Number(i+1) + ":");
-  var annio = prompt("Ingresa el año del auto N°" + Number(i+1) + ":");
-  autos.push(new auto (marca, modelo, annio));
+var car_list = [];
+
+class Car {
+    constructor(brand, model, year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year
+    }
 }
 
-for(var i = 0 ; i < autos.length ; i++){
-  console.log(autos[i]);
+function make_anew_car() {
+    cars = parseInt(prompt("How much cars do you want? type a number."))
+
+    if (typeof cars === "number"){
+        for (var i = 0; i < cars; i++){
+            brand = prompt("Type the car brand here");
+            model = prompt("Type the car model");
+            year = parseInt(prompt("Type the year in which the car came out"));
+            car_list.push(new Car (brand, model, year));
+        }
+    }else{
+        alert("C'mon brother type a number please");
+    }
 }
+
+make_anew_car();
+console.log(car_list);
