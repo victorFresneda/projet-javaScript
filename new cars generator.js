@@ -1,27 +1,18 @@
-var car_list = [];
+function auto (MARCA, MODELO, ANNIO){
+    this.marca = MARCA;
+    this.modelo = MODELO;
+    this.annio = ANNIO;
+  }
+  var autos = [];
+  for(let i = 0 ; i < 30 ; i++){
+    var marca = prompt("Ingresa la marca del auto");
+    var modelo = prompt("Ingresa el modelo del auto");
+    var annio = prompt("Ingresa el año del auto");
+    autos.push(new auto (marca, modelo, annio));
+  }
+  
+  for(let i = 0 ; i < autos.length ; i++){
+    console.log(autos[i]);
+  }
 
-class Car {
-    constructor(brand, model, year) {
-        this.brand = brand;
-        this.model = model;
-        this.year = year
-    }
-}
-
-function make_anew_car() {
-    cars = parseInt(prompt("How much cars do you want? type a number."))
-
-    if (typeof cars === "number"){
-        for (var i = 0; i < cars; i++){
-            brand = prompt("Type the car brand here");
-            model = prompt("Type the car model");
-            year = parseInt(prompt("Type the year in which the car came out"));
-            car_list.push(new Car (brand, model, year));
-        }
-    }else{
-        alert("C'mon brother type a number please");
-    }
-}
-
-make_anew_car();
-console.log(car_list);
+  
